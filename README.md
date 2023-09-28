@@ -1,29 +1,40 @@
-# vue-vite
+# edgio-vue-vite-with-prefetch
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Vite and Edgio.
 
-## Recommended IDE Setup
+## Used versions
+Node.js 16.20.2
+NPM 8.19.4
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Project setup
 
 ```sh
+npm i @edgio/cli -g
+git clone git@github.com:edg-test/edgio-vue-vite-with-prefetch.git
+cd edgio-vue-vite-with-prefetch
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Start development server
 
 ```sh
-npm run dev
+edgio dev
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-npm run build
+edgio build
+```
+
+### Test locally the production build
+
+```sh
+edgio run -p
+```
+
+### Deploy the app
+
+```sh
+edgio deploy --skip-build
 ```

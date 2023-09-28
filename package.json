@@ -1,4 +1,7 @@
 {
+  "name": "edgio-vue-vite-with-prefetch",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "edgio:dev": "edgio dev",
     "edgio:build": "edgio build",
@@ -7,19 +10,15 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "name": "vue-vite",
-  "version": "0.0.0",
-  "private": true,
   "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@edgio/cli": "^7.2.7",
     "@edgio/core": "^7.2.7",
     "@edgio/devtools": "^7.2.7",
     "@edgio/prefetch": "^7.2.7",
-    "@edgio/vue": "file:.yalc/@edgio/vue",
+    "@edgio/vue": "^7.2.7",
     "@edgio/vue-cva": "^7.2.7",
     "@vitejs/plugin-vue": "^4.3.4",
     "vite": "^4.4.9"
