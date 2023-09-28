@@ -1,0 +1,50 @@
+{
+  "name": "@edgio/vue",
+  "version": "7.2.5+228ae79d",
+  "author": "Edgio",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --entry src/Prefetch.vue --filename Prefetch --formats umd; babel src -d dist; rm dist/demo.html dist/Prefetch.umd.js.map; cp -r package.json README.md ./dist; mv dist/Prefetch.umd.js dist/Prefetch.js",
+    "push-build": "npm run build && cd dist && yalc push && cd ..",
+    "release": "cd ./dist; npm publish --access public",
+    "test": "jest",
+    "watch": "npm-watch"
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.(js)?$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "./src/**/*.{js,jsx,vue}",
+      "!**/mocks/**",
+      "!**/index.js"
+    ]
+  },
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "watch": {
+    "push-build": {
+      "patterns": [
+        "src",
+        "package.json"
+      ],
+      "extensions": "*",
+      "quiet": false
+    }
+  },
+  "yalcSig": "228ae79d97350120172f3afa561cd732"
+}
